@@ -1,0 +1,103 @@
+
+islami-forum/
+│
+├── frontend/                           # ÖN YÜZ (MEVCUT)
+│   │
+│   ├── index.html                      # Ana HTML yapısı
+│   │
+│   ├── css/
+│   │   ├── main.css                    # Genel stil + responsive
+│   │   ├── auth.css                    # Modal stilleri
+│   │   └── admin.css                   # Admin panel stilleri
+│   │
+│   └── js/
+│       ├── app.js                      # Ana koordinatör + Takvim
+│       ├── categories.js               # Kategori yönetimi
+│       ├── widgets.js                  # Widget'lar (yeni üyeler, hit konular)
+│       │
+│       ├── services/
+│       │   ├── api.js                  # CRUD işlemleri
+│       │   └── auth.service.js         # Auth servisleri
+│       │
+│       ├── auth/
+│       │   ├── auth.logic.js           # Kayıt/giriş/çıkış mantığı
+│       │   └── auth.ui.js              # Modal gösterimi
+│       │
+│       ├── topics/
+│       │   ├── topic-create.js         # Konu oluşturma (formatlar, emoji)
+│       │   ├── topic-view.js           # Konu görüntüleme
+│       │   ├── topic-reply.js          # Yanıt yazma (formatlar, emoji)
+│       │   └── topics.js               # Ana konu modülü
+│       │
+│       ├── admin/
+│       │   └── admin.js                # Admin paneli (silme, susturma, loglama)
+│       │
+│       ├── moderator/
+│       │   └── moderator.js            # Moderatör paneli
+│       │
+│       ├── ui/
+│       │   ├── modal.js                # Popup oluşturma/kapatma
+│       │   └── toast.js                # Bildirim mesajları
+│       │
+│       └── utils/
+│           └── storage.js              # localStorage wrapper
+│
+│
+└── backend/                            # ARKA YÜZ (YENİ)
+    │
+    ├── server.js                       # Express başlatma + route bağlama
+    │
+    ├── package.json                    # npm bağımlılıkları
+    │
+    ├── .env                            # JWT secret + port ayarları
+    │
+    ├── .gitignore                      # node_modules/ + .env ignore
+    │
+    │
+    ├── database/
+    │   ├── forum.db                    # SQLite veritabanı
+    │   ├── init.js                     # Tabloları oluşturma
+    │   └── backups/                    # Otomatik yedekler
+    │
+    │
+    ├── config/
+    │   ├── database.js                 # SQLite bağlantı kurma
+    │   └── security.js                 # CORS + rate limit ayarları
+    │
+    │
+    ├── middleware/
+    │   ├── auth.middleware.js          # JWT token doğrulama
+    │   ├── rateLimit.middleware.js     # Spam önleme (100 istek/dk)
+    │   ├── validation.middleware.js    # Veri doğrulama (username, password vb.)
+    │   └── sanitize.middleware.js      # XSS/injection temizleme
+    │
+    │
+    ├── models/
+    │   ├── User.js                     # Kullanıcı CRUD işlemleri
+    │   ├── Topic.js                    # Konu CRUD işlemleri
+    │   ├── Reply.js                    # Yanıt CRUD işlemleri
+    │   ├── Log.js                      # Log CRUD işlemleri
+    │   └── Activity.js                 # Aktivite CRUD işlemleri
+    │
+    │
+    ├── routes/
+    │   ├── auth.routes.js              # POST /register, /login, /logout
+    │   ├── user.routes.js              # GET/PUT/DELETE kullanıcı işlemleri
+    │   ├── topic.routes.js             # GET/POST/PUT/DELETE konu işlemleri
+    │   ├── reply.routes.js             # GET/POST/DELETE yanıt işlemleri
+    │   └── admin.routes.js             # Admin işlemleri (mute, promote, backup)
+    │
+    │
+    ├── controllers/
+    │   ├── auth.controller.js          # Kayıt + giriş + token üretme
+    │   ├── user.controller.js          # Kullanıcı listeleme + güncelleme + silme
+    │   ├── topic.controller.js         # Konu oluşturma + listeleme + silme
+    │   ├── reply.controller.js         # Yanıt oluşturma + listeleme + silme
+    │   └── admin.controller.js         # Susturma + moderatör yapma + yedekleme
+    │
+    │
+    └── utils/
+        ├── token.js                    # JWT oluşturma + doğrulama
+        ├── encryption.js               # Şifre hashleme + karşılaştırma (bcrypt)
+        ├── backup.js                   # Otomatik yedekleme + geri yükleme
+        └── logger.js                   # Console + dosya loglama

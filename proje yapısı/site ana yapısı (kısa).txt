@@ -1,0 +1,41 @@
+islami-forum/
+│
+├─ index.html
+│
+├─ css/
+│  ├─ main.css
+│  ├─ auth.css
+│  └─ admin.css
+│
+├─ js/
+│  ├─ app.js
+│  │
+│  ├─ services/
+│  │  ├─ api.js
+│  │  └─ auth.service.js
+│  │
+│  ├─ auth/
+│  │  ├─ auth.ui.js
+│  │  └─ auth.logic.js
+│  │
+│  ├─ categories.js
+│  ├─ widgets.js
+│  │
+│  ├─ topics/
+│  │  ├─ topics.js
+│  │  ├─ topic-create.js
+│  │  ├─ topic-view.js
+│  │  └─ topic-reply.js
+│  │
+│  ├─ admin/
+│  │  └─ admin.js
+│  │
+│  ├─ moderator/
+│  │  └─ moderator.js
+│  │
+│  ├─ ui/
+│  │  ├─ modal.js
+│  │  └─ toast.js
+│  │
+│  └─ utils/
+│     └─ storage.js

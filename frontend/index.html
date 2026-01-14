@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İslami Forum</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- YUKARI BÖLÜM -->
+    <div class="top-section">
+        <div class="ayetler-row">
+            <button class="ayet-btn" data-group="fetih">Fetih Ayetleri</button>
+            <button class="ayet-btn" data-group="tevekkul">Tevekkül Ayetleri</button>
+            <button class="ayet-btn" data-group="hifz">Hıfz Ayetleri</button>
+            <button class="ayet-btn" data-group="dua">Dua Ayetleri</button>
+            <button class="ayet-btn" data-group="kadir">Kadir Ayetleri</button>
+        </div>
+        
+        <div class="ayetler-row">
+            <button class="ayet-btn" data-group="rabbena">Rabbena Ayetleri</button>
+            <button class="ayet-btn" data-group="sifa">Şifa Ayetleri</button>
+            <button class="ayet-btn" data-group="tefekkur">Tefekkür Ayetleri</button>
+            <button class="ayet-btn" data-group="tevbe">Tevbe, Mağfiret Ayetleri</button>
+            <button class="ayet-btn" data-group="kahir">Kahır Ayetleri</button>
+        </div>
+
+        <div class="ayetler-row">
+            <button class="ayet-btn" data-group="izzet">İzzet Ayetleri</button>
+            <button class="ayet-btn" data-group="secde">Secde Ayetleri</button>
+            <button class="ayet-btn" data-group="habir">Habir Ayetleri</button>
+            <button class="ayet-btn" data-group="kunfeyekun">Künfeyekün Ayetleri</button>
+            <button class="ayet-btn" data-group="rahmet">Rahmet Ayetleri</button>
+        </div>
+
+        <div class="ayetler-row">
+            <button class="ayet-btn" data-group="hasr">Haşr Son 4 Ayet</button>
+            <button class="ayet-btn" data-group="hadid">Hadid İlk 6 Ayet</button>
+            <button class="ayet-btn" data-group="fetihson">Fetih Son Ayet</button>
+            <button class="ayet-btn" data-group="aliimran">Ali İmran 154. Ayet</button>
+            <button class="ayet-btn" data-group="tehlil">Tehlil Ayetleri</button>
+        </div>
+
+        <div class="sistem-row">
+            <button class="sistem-btn">İlahi Dinleme</button>
+            <button class="sistem-btn">Hava Durumu</button>
+            <button class="sistem-btn">Ezan Vakti Namaz</button>
+            <button class="sistem-btn">Takvim</button>
+            <button class="sistem-btn">İletişim</button>
+            <button class="sistem-btn">İlim Meclisi</button>
+            <button class="sistem-btn">Özel Bölüm</button>
+            <button class="sistem-btn">Kur'an Dinleme</button>
+        </div>
+
+        <div class="widget-row">
+            <div class="widget-container">
+                <div id="hitKonular" class="widget">
+                    <h3>Hit Konular</h3>
+                    <p>Yükleniyor...</p>
+                </div>
+                <div id="yeniKonular" class="widget">
+                    <h3>Yeni Konular</h3>
+                    <p>Yükleniyor...</p>
+                </div>
+                <div id="yeniUyeler" class="widget">
+                    <h3>Yeni Üyeler</h3>
+                    <p>Yükleniyor...</p>
+                </div>
+            </div>
+            
+            <div class="slogan-container">
+                <div class="slogan">Emrolunduğun Gibi Dost Doğru Ol (فَاسْتَقِمْ كَمَا أُمِرْتَ)</div>
+                <div class="slogan">Ya Olduğun Gibi Görün Ya Da Göründüğün Gibi Ol (كُنْ كَمَا أَنْتَ أَوِ اظْهَرْ كَمَا تَكُونُ)</div>
+                <div class="slogan">Nefsini Bilen Rabbini Bilir (مَنْ عَرَفَ نَفْسَهُ فَقَدْ عَرَفَ رَبَّهُ)</div>
+            </div>
+            
+            <div class="widget-container">
+                <div id="cokYazanlar" class="widget">
+                    <h3>Çok Yazanlar</h3>
+                    <p>Yükleniyor...</p>
+                </div>
+                <div id="ziyaretciSayisi" class="widget">
+                    <h3>Ziyaretçi Sayısı</h3>
+                    <p>Yükleniyor...</p>
+                </div>
+                <div id="icerdekiler" class="widget">
+                    <h3>İçerdekiler</h3>
+                    <p>Yükleniyor...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-row">
+            <button class="menu-btn">Kurallarımız</button>
+            <button class="menu-btn">Çalışmalarımız</button>
+            <button class="menu-btn">Danışma Meclisi</button>
+            <button class="menu-btn">Dost Siteler</button>
+            <button class="menu-btn">Düşman Siteler</button>
+            <button class="menu-btn">Misyonumuz</button>
+        </div>
+
+        <div class="auth-row">
+            <button id="kayitBtn" class="auth-btn">Kayıt Ol</button>
+            <button id="girisBtn" class="auth-btn">Giriş Yap</button>
+            <button id="profilBtn" class="auth-btn" style="display:none;">Profilini Görüntüle</button>
+            <button id="adminPanelBtn" class="auth-btn" style="display:none;">Admin Paneli</button>
+        </div>
+    </div>
+
+    <!-- ANA KONTEYNER: SOL + ORTA + SAĞ -->
+    <div class="main-container">
+        <!-- SOL BÖLÜM -->
+        <div class="left-section">
+            <button class="category-btn" data-category="SO4-1">Esma-i Nebi</button>
+            <button class="category-btn" data-category="SO4-2">4 Halife ve Mahreçleri</button>
+            <button class="category-btn" data-category="SO2-3">Tevbe İstiğfar</button>
+            <button class="category-btn" data-category="SO2-4">Bol Sevap</button>
+            <button class="category-btn" data-category="SO2-5">Dilek - Hacet</button>
+            <button class="category-btn" data-category="SO2-6">Alternatif Tıp</button>
+            <button class="category-btn" data-category="SO2-7">Akdi Lisan</button>
+            <button class="category-btn" data-category="SO2-8">Muhabbet</button>
+            <button class="category-btn" data-category="SO2-9">Hırsızlık</button>
+            <button class="category-btn" data-category="SO2-10">Rızık</button>
+            <button class="category-btn" data-category="SO2-11">Cine - Periye Dair Her Şey</button>
+            <button class="category-btn" data-category="SO2-12">İstihare</button>
+            <button class="category-btn" data-category="SO2-13">Muhafaza</button>
+            <button class="category-btn" data-category="SO2-14">Kısmet</button>
+            <button class="category-btn" data-category="SO2-15">Sabır</button>
+            <button class="category-btn" data-category="SO2-16">Tevekkül</button>
+            <button class="category-btn" data-category="SO2-17">Psikoterapi</button>
+            <button class="category-btn" data-category="SO2-18">Esmaül Hüsna</button>
+            <button class="category-btn" data-category="SO2-19">Hastalıklar</button>
+            <button class="category-btn" data-category="SO2-20">İstişare</button>
+            <button class="category-btn" data-category="SO2-21">Sohbet Köşesi</button>
+            <button class="category-btn" data-category="SO2-22">Zikir Bölümü</button>
+            <button class="category-btn" data-category="SO2-23">Kur'an Öğrenme</button>
+            <button class="category-btn" data-category="SO2-24">Muhtelif</button>
+            <button class="category-btn large" data-category="SO5-25">4 Kutbu Kamil</button>
+        </div>
+
+        <!-- ORTA BÖLÜM (Dinamik İçerik) -->
+        <div id="ortaAlan" class="middle-section">
+            <div class="welcome-message">
+                <h1>Hoş Geldiniz</h1>
+                <p>Sol ve sağ menülerden konulara göz atabilirsiniz.</p>
+            </div>
+        </div>
+
+        <!-- SAĞ BÖLÜM -->
+        <div class="right-section">
+            <button class="category-btn" data-category="SA4-1">Esmaül Hüsna</button>
+            <button class="category-btn" data-category="SA4-2">313 Nebi ve Mahreçleri</button>
+            <button class="category-btn" data-category="SA2-3">Tefsirler</button>
+            <button class="category-btn" data-category="SA2-4">Fıkıh Kitapları</button>
+            <button class="category-btn" data-category="SA2-5">Hadis Kitapları</button>
+            <button class="category-btn" data-category="SA2-6">Sarf - Nahiv Kitapları</button>
+            <button class="category-btn" data-category="SA2-7">Fetva Kitapları</button>
+            <button class="category-btn" data-category="SA2-8">Hanfi Mezhebi</button>
+            <button class="category-btn" data-category="SA2-9">Şafii Mezhebi</button>
+            <button class="category-btn" data-category="SA2-10">Maliki Mezhebi</button>
+            <button class="category-btn" data-category="SA2-11">Hanbeli Mezhebi</button>
+            <button class="category-btn" data-category="SA2-12">Peygamberlerin Hayatı</button>
+            <button class="category-btn" data-category="SA2-13">4 Halifenin Hayatı</button>
+            <button class="category-btn" data-category="SA2-14">Tasavvuf Kitapları</button>
+            <button class="category-btn" data-category="SA2-15">ALLLAH (A.C.) Dostları</button>
+            <button class="category-btn" data-category="SA2-16">İslam Alimleri - Bilim Adamları</button>
+            <button class="category-btn" data-category="SA2-17">Veda Hutbesi</button>
+            <button class="category-btn" data-category="SA2-18">Altın Sözler</button>
+            <button class="category-btn" data-category="SA2-19">Dini şiirler - Kasideler</button>
+            <button class="category-btn" data-category="SA2-20">Dini Hikayeler</button>
+            <button class="category-btn" data-category="SA2-21">Ricali Gayb Duaları</button>
+            <button class="category-btn" data-category="SA2-22">Arifler Sofrası</button>
+            <button class="category-btn" data-category="SA2-23">Tılsımlar</button>
+            <button class="category-btn" data-category="SA2-24">İslami Programlar</button>
+            <button class="category-btn large" data-category="SA5-25">12 İmam İsimleri</button>
+        </div>
+    </div>
+
+    <!-- AŞAĞI BÖLÜM -->
+    <div class="bottom-section">
+        <div class="dua-container">
+            <div class="dua-text">Ya Qadiyel Hacat Ya Mucibed - Deavat İstecib Duaêna Bi rahmetike Ya ErhamerRahimin</div>
+            <div class="dua-small-container">
+                <div class="dua-small">Her Kim "ALLAH" (A.C.) içinse, "ALLAH" (A.C.) Onun içindir</div>
+                <div class="dua-small">"ALLAH" (A.C.) Sabredenlerle Beraberdir</div>
+                <div class="dua-small">Üzülme Gevşeme İnanıyorsan Üstünsün</div>
+            </div>
+            <div class="dua-text">Ya Kadiri Mutlak, Ya Sahibi Mutlak, Ya Sultanı Mutlak, Eskina Ecirna, Bi Rahmetike Ya ErhamerRahimin</div>
+        </div>
+
+        <div class="ayetler-alt-row">
+            <button class="ayet-alt-btn">Mubin Ayetleri</button>
+            <button class="ayet-alt-btn">Tevessül Duaları</button>
+            <button class="ayet-alt-btn">Salavatlar</button>
+            <button class="ayet-alt-btn">Alim Ayetleri</button>
+        </div>
+
+        <div class="ayetler-alt-row">
+            <button class="ayet-alt-btn">Şedidül Azab Ayetleri</button>
+            <button class="ayet-alt-btn">Hizibler</button>
+            <button class="ayet-alt-btn">Celceletuye</button>
+            <button class="ayet-alt-btn">Sihir Ayetleri</button>
+        </div>
+
+        <div class="ayetler-alt-row">
+            <button class="ayet-alt-btn">Keşif Ayetleri</button>
+            <button class="ayet-alt-btn">Özel Levhalar</button>
+            <button class="ayet-alt-btn">Berhetiyye</button>
+            <button class="ayet-alt-btn">Şefaat Ayetleri</button>
+        </div>
+
+        <div class="ayetler-alt-row">
+            <button class="ayet-alt-btn">Hamd Ayetleri</button>
+            <button class="ayet-alt-btn">Özel Mühürler</button>
+            <button class="ayet-alt-btn">Azimetler</button>
+            <button class="ayet-alt-btn">Kafirlerle ilgili Ayetler</button>
+        </div>
+
+        <div class="ayetler-alt-row">
+            <button class="ayet-alt-btn">Selam Ayetleri</button>
+            <button class="ayet-alt-btn">Vekil Ayetleri</button>
+            <button class="ayet-alt-btn">Davetler</button>
+            <button class="ayet-alt-btn">5 ve 7 Ayetler</button>
+        </div>
+    </div>
+
+    <script src="js/utils/storage.js"></script>
+    <script src="js/services/api.js"></script>
+    <script src="js/services/auth.service.js"></script>
+    <script src="js/ui/toast.js"></script>
+    <script src="js/ui/modal.js"></script>
+    <script src="js/auth/auth.logic.js"></script>
+    <script src="js/auth/auth.ui.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="js/topics/topic-create.js"></script>
+    <script src="js/topics/topic-view.js"></script>
+    <script src="js/topics/topic-reply.js"></script>
+    <script src="js/topics/topics.js"></script>
+    <script src="js/widgets.js"></script>
+    <script src="js/moderator/moderator.js"></script>
+    <script src="js/admin/admin.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
